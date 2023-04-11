@@ -1,0 +1,337 @@
+Parameters:
+
+File = cdnh44o.tif
+No. of Contours = 5
+N = 1000, M = 1000
+ISOVALUE = 0
+CSZ = 7
+DISPLAY = True
+INPISTXT = false
+
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 59.23      2.15     2.15       97    22.16    22.16  drawContours(short*)
+ 19.56      2.86     0.71       97     7.32     7.32  applyThresh(bool*, float*, int)
+ 14.05      3.37     0.51       97     5.26     7.84  makeContourGrid(short*, bool*)
+  6.89      3.62     0.25 96806097     0.00     0.00  makeContourUtil(int, int, int, int)
+  0.28      3.63     0.01        1    10.00    10.00  readDem(float*, bool)
+  0.00      3.63     0.00  2982098     0.00     0.00  cv::_InputArray::init(int, void const*)
+  0.00      3.63     0.00  1988000     0.00     0.00  cv::Point_<int>::Point_(int, int)
+  0.00      3.63     0.00  1000002     0.00     0.00  float const& std::max<float>(float const&, float const&)
+  0.00      3.63     0.00  1000000     0.00     0.00  float const& std::min<float>(float const&, float const&)
+  0.00      3.63     0.00   994098     0.00     0.00  cv::_InputArray::~_InputArray()
+  0.00      3.63     0.00   994098     0.00     0.00  cv::Size_<int>::Size_()
+  0.00      3.63     0.00   994000     0.00     0.00  cv::_InputArray::_InputArray()
+  0.00      3.63     0.00   994000     0.00     0.00  cv::_OutputArray::_OutputArray()
+  0.00      3.63     0.00   994000     0.00     0.00  cv::_OutputArray::~_OutputArray()
+  0.00      3.63     0.00   994000     0.00     0.00  cv::_InputOutputArray::_InputOutputArray(cv::Mat const&)
+  0.00      3.63     0.00   994000     0.00     0.00  cv::_InputOutputArray::~_InputOutputArray()
+  0.00      3.63     0.00   994000     0.00     0.00  cv::Vec<double, 4>::Vec()
+  0.00      3.63     0.00   994000     0.00     0.00  cv::Matx<double, 4, 1>::Matx()
+  0.00      3.63     0.00   994000     0.00     0.00  cv::Rect_<int>::Rect_(int, int, int, int)
+  0.00      3.63     0.00   994000     0.00     0.00  cv::Scalar_<double>::Scalar_(double)
+  0.00      3.63     0.00   994000     0.00     0.00  cv::Mat::operator()(cv::Rect_<int> const&) const
+  0.00      3.63     0.00     1170     0.00     0.00  std::iterator_traits<char const*>::difference_type std::__distance<char const*>(char const*, char const*, std::random_access_iterator_tag)
+  0.00      3.63     0.00     1170     0.00     0.00  std::iterator_traits<char const*>::iterator_category std::__iterator_category<char const*>(char const* const&)
+  0.00      3.63     0.00     1168     0.00     0.00  bool __gnu_cxx::__is_null_pointer<char const>(char const*)
+  0.00      3.63     0.00     1168     0.00     0.00  std::iterator_traits<char const*>::difference_type std::distance<char const*>(char const*, char const*)
+  0.00      3.63     0.00      196     0.00     0.00  std::char_traits<char>::length(char const*)
+  0.00      3.63     0.00      196     0.00     0.00  void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)
+  0.00      3.63     0.00      196     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&)
+  0.00      3.63     0.00       98     0.00     0.00  cv::_InputArray::_InputArray(cv::Mat const&)
+  0.00      3.63     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00      3.63     0.00        1     0.00     0.00  cv::MatExpr::~MatExpr()
+  0.00      3.63     0.00        1     0.00     0.00  cv::MatExpr::operator cv::Mat() const
+  0.00      3.63     0.00        1     0.00     0.00  std::abs(float)
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2022 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 4 byte(s) for 0.28% of 3.63 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]    100.0    0.00    3.63                 main [1]
+                2.15    0.00      97/97          drawContours(short*) [2]
+                0.51    0.25      97/97          makeContourGrid(short*, bool*) [3]
+                0.71    0.00      97/97          applyThresh(bool*, float*, int) [4]
+                0.01    0.00       1/1           readDem(float*, bool) [6]
+                0.00    0.00     196/196         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [35]
+                0.00    0.00      98/98          cv::_InputArray::_InputArray(cv::Mat const&) [36]
+                0.00    0.00      98/994098      cv::_InputArray::~_InputArray() [17]
+                0.00    0.00       2/1000002     float const& std::max<float>(float const&, float const&) [15]
+                0.00    0.00       1/1           std::abs(float) [40]
+-----------------------------------------------
+                2.15    0.00      97/97          main [1]
+[2]     59.2    2.15    0.00      97         drawContours(short*) [2]
+                0.00    0.00 1988000/1988000     cv::Point_<int>::Point_(int, int) [14]
+                0.00    0.00  994000/994000      cv::Scalar_<double>::Scalar_(double) [27]
+                0.00    0.00  994000/994000      cv::Rect_<int>::Rect_(int, int, int, int) [26]
+                0.00    0.00  994000/994000      cv::Mat::operator()(cv::Rect_<int> const&) const [28]
+                0.00    0.00  994000/994000      cv::_InputOutputArray::_InputOutputArray(cv::Mat const&) [22]
+                0.00    0.00  994000/994000      cv::_InputOutputArray::~_InputOutputArray() [23]
+-----------------------------------------------
+                0.51    0.25      97/97          main [1]
+[3]     20.9    0.51    0.25      97         makeContourGrid(short*, bool*) [3]
+                0.25    0.00 96806097/96806097     makeContourUtil(int, int, int, int) [5]
+-----------------------------------------------
+                0.71    0.00      97/97          main [1]
+[4]     19.6    0.71    0.00      97         applyThresh(bool*, float*, int) [4]
+-----------------------------------------------
+                0.25    0.00 96806097/96806097     makeContourGrid(short*, bool*) [3]
+[5]      6.9    0.25    0.00 96806097         makeContourUtil(int, int, int, int) [5]
+-----------------------------------------------
+                0.01    0.00       1/1           main [1]
+[6]      0.3    0.01    0.00       1         readDem(float*, bool) [6]
+                0.00    0.00 1000000/1000000     float const& std::min<float>(float const&, float const&) [16]
+                0.00    0.00 1000000/1000002     float const& std::max<float>(float const&, float const&) [15]
+-----------------------------------------------
+                0.00    0.00      98/2982098     cv::_InputArray::_InputArray(cv::Mat const&) [36]
+                0.00    0.00  994000/2982098     cv::_InputArray::_InputArray() [19]
+                0.00    0.00  994000/2982098     cv::_OutputArray::_OutputArray() [20]
+                0.00    0.00  994000/2982098     cv::_InputOutputArray::_InputOutputArray(cv::Mat const&) [22]
+[13]     0.0    0.00    0.00 2982098         cv::_InputArray::init(int, void const*) [13]
+-----------------------------------------------
+                0.00    0.00 1988000/1988000     drawContours(short*) [2]
+[14]     0.0    0.00    0.00 1988000         cv::Point_<int>::Point_(int, int) [14]
+-----------------------------------------------
+                0.00    0.00       2/1000002     main [1]
+                0.00    0.00 1000000/1000002     readDem(float*, bool) [6]
+[15]     0.0    0.00    0.00 1000002         float const& std::max<float>(float const&, float const&) [15]
+-----------------------------------------------
+                0.00    0.00 1000000/1000000     readDem(float*, bool) [6]
+[16]     0.0    0.00    0.00 1000000         float const& std::min<float>(float const&, float const&) [16]
+-----------------------------------------------
+                0.00    0.00      98/994098      main [1]
+                0.00    0.00  994000/994098      cv::_OutputArray::~_OutputArray() [21]
+[17]     0.0    0.00    0.00  994098         cv::_InputArray::~_InputArray() [17]
+-----------------------------------------------
+                0.00    0.00      98/994098      cv::_InputArray::_InputArray(cv::Mat const&) [36]
+                0.00    0.00  994000/994098      cv::_InputArray::_InputArray() [19]
+[18]     0.0    0.00    0.00  994098         cv::Size_<int>::Size_() [18]
+-----------------------------------------------
+                0.00    0.00  994000/994000      cv::_OutputArray::_OutputArray() [20]
+[19]     0.0    0.00    0.00  994000         cv::_InputArray::_InputArray() [19]
+                0.00    0.00  994000/994098      cv::Size_<int>::Size_() [18]
+                0.00    0.00  994000/2982098     cv::_InputArray::init(int, void const*) [13]
+-----------------------------------------------
+                0.00    0.00  994000/994000      cv::_InputOutputArray::_InputOutputArray(cv::Mat const&) [22]
+[20]     0.0    0.00    0.00  994000         cv::_OutputArray::_OutputArray() [20]
+                0.00    0.00  994000/994000      cv::_InputArray::_InputArray() [19]
+                0.00    0.00  994000/2982098     cv::_InputArray::init(int, void const*) [13]
+-----------------------------------------------
+                0.00    0.00  994000/994000      cv::_InputOutputArray::~_InputOutputArray() [23]
+[21]     0.0    0.00    0.00  994000         cv::_OutputArray::~_OutputArray() [21]
+                0.00    0.00  994000/994098      cv::_InputArray::~_InputArray() [17]
+-----------------------------------------------
+                0.00    0.00  994000/994000      drawContours(short*) [2]
+[22]     0.0    0.00    0.00  994000         cv::_InputOutputArray::_InputOutputArray(cv::Mat const&) [22]
+                0.00    0.00  994000/994000      cv::_OutputArray::_OutputArray() [20]
+                0.00    0.00  994000/2982098     cv::_InputArray::init(int, void const*) [13]
+-----------------------------------------------
+                0.00    0.00  994000/994000      drawContours(short*) [2]
+[23]     0.0    0.00    0.00  994000         cv::_InputOutputArray::~_InputOutputArray() [23]
+                0.00    0.00  994000/994000      cv::_OutputArray::~_OutputArray() [21]
+-----------------------------------------------
+                0.00    0.00  994000/994000      cv::Scalar_<double>::Scalar_(double) [27]
+[24]     0.0    0.00    0.00  994000         cv::Vec<double, 4>::Vec() [24]
+                0.00    0.00  994000/994000      cv::Matx<double, 4, 1>::Matx() [25]
+-----------------------------------------------
+                0.00    0.00  994000/994000      cv::Vec<double, 4>::Vec() [24]
+[25]     0.0    0.00    0.00  994000         cv::Matx<double, 4, 1>::Matx() [25]
+-----------------------------------------------
+                0.00    0.00  994000/994000      drawContours(short*) [2]
+[26]     0.0    0.00    0.00  994000         cv::Rect_<int>::Rect_(int, int, int, int) [26]
+-----------------------------------------------
+                0.00    0.00  994000/994000      drawContours(short*) [2]
+[27]     0.0    0.00    0.00  994000         cv::Scalar_<double>::Scalar_(double) [27]
+                0.00    0.00  994000/994000      cv::Vec<double, 4>::Vec() [24]
+-----------------------------------------------
+                0.00    0.00  994000/994000      drawContours(short*) [2]
+[28]     0.0    0.00    0.00  994000         cv::Mat::operator()(cv::Rect_<int> const&) const [28]
+-----------------------------------------------
+                0.00    0.00    1170/1170        std::iterator_traits<char const*>::difference_type std::distance<char const*>(char const*, char const*) [32]
+[29]     0.0    0.00    0.00    1170         std::iterator_traits<char const*>::difference_type std::__distance<char const*>(char const*, char const*, std::random_access_iterator_tag) [29]
+-----------------------------------------------
+                0.00    0.00    1170/1170        std::iterator_traits<char const*>::difference_type std::distance<char const*>(char const*, char const*) [32]
+[30]     0.0    0.00    0.00    1170         std::iterator_traits<char const*>::iterator_category std::__iterator_category<char const*>(char const* const&) [30]
+-----------------------------------------------
+                0.00    0.00    1168/1168        void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [34]
+[31]     0.0    0.00    0.00    1168         bool __gnu_cxx::__is_null_pointer<char const>(char const*) [31]
+-----------------------------------------------
+                0.00    0.00    1168/1168        void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [34]
+[32]     0.0    0.00    0.00    1168         std::iterator_traits<char const*>::difference_type std::distance<char const*>(char const*, char const*) [32]
+                0.00    0.00    1170/1170        std::iterator_traits<char const*>::iterator_category std::__iterator_category<char const*>(char const* const&) [30]
+                0.00    0.00    1170/1170        std::iterator_traits<char const*>::difference_type std::__distance<char const*>(char const*, char const*, std::random_access_iterator_tag) [29]
+-----------------------------------------------
+                0.00    0.00     196/196         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [35]
+[33]     0.0    0.00    0.00     196         std::char_traits<char>::length(char const*) [33]
+-----------------------------------------------
+                0.00    0.00     196/196         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [35]
+[34]     0.0    0.00    0.00     196         void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [34]
+                0.00    0.00    1168/1168        bool __gnu_cxx::__is_null_pointer<char const>(char const*) [31]
+                0.00    0.00    1168/1168        std::iterator_traits<char const*>::difference_type std::distance<char const*>(char const*, char const*) [32]
+-----------------------------------------------
+                0.00    0.00     196/196         main [1]
+[35]     0.0    0.00    0.00     196         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [35]
+                0.00    0.00     196/196         std::char_traits<char>::length(char const*) [33]
+                0.00    0.00     196/196         void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [34]
+-----------------------------------------------
+                0.00    0.00      98/98          main [1]
+[36]     0.0    0.00    0.00      98         cv::_InputArray::_InputArray(cv::Mat const&) [36]
+                0.00    0.00      98/994098      cv::Size_<int>::Size_() [18]
+                0.00    0.00      98/2982098     cv::_InputArray::init(int, void const*) [13]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I_FILENAME [41]
+[37]     0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [37]
+                0.00    0.00       1/1           cv::MatExpr::operator cv::Mat() const [39]
+                0.00    0.00       1/1           cv::MatExpr::~MatExpr() [38]
+-----------------------------------------------
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [37]
+[38]     0.0    0.00    0.00       1         cv::MatExpr::~MatExpr() [38]
+-----------------------------------------------
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [37]
+[39]     0.0    0.00    0.00       1         cv::MatExpr::operator cv::Mat() const [39]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[40]     0.0    0.00    0.00       1         std::abs(float) [40]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2022 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+   [4] applyThresh(bool*, float*, int) [21] cv::_OutputArray::~_OutputArray() [28] cv::Mat::operator()(cv::Rect_<int> const&) const
+   [2] drawContours(short*)   [22] cv::_InputOutputArray::_InputOutputArray(cv::Mat const&) [39] cv::MatExpr::operator cv::Mat() const
+   [3] makeContourGrid(short*, bool*) [23] cv::_InputOutputArray::~_InputOutputArray() [33] std::char_traits<char>::length(char const*)
+   [5] makeContourUtil(int, int, int, int) [24] cv::Vec<double, 4>::Vec() [34] void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)
+  [37] __static_initialization_and_destruction_0(int, int) [25] cv::Matx<double, 4, 1>::Matx() [35] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&)
+   [6] readDem(float*, bool)  [26] cv::Rect_<int>::Rect_(int, int, int, int) [29] std::iterator_traits<char const*>::difference_type std::__distance<char const*>(char const*, char const*, std::random_access_iterator_tag)
+  [13] cv::_InputArray::init(int, void const*) [18] cv::Size_<int>::Size_() [30] std::iterator_traits<char const*>::iterator_category std::__iterator_category<char const*>(char const* const&)
+  [36] cv::_InputArray::_InputArray(cv::Mat const&) [14] cv::Point_<int>::Point_(int, int) [40] std::abs(float)
+  [19] cv::_InputArray::_InputArray() [38] cv::MatExpr::~MatExpr() [15] float const& std::max<float>(float const&, float const&)
+  [17] cv::_InputArray::~_InputArray() [27] cv::Scalar_<double>::Scalar_(double) [16] float const& std::min<float>(float const&, float const&)
+  [20] cv::_OutputArray::_OutputArray() [31] bool __gnu_cxx::__is_null_pointer<char const>(char const*) [32] std::iterator_traits<char const*>::difference_type std::distance<char const*>(char const*, char const*)

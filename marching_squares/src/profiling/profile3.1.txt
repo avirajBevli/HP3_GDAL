@@ -1,0 +1,283 @@
+Parameters:
+
+File = cdnh44o.tif
+No. of Contours = 1000
+N = 1024, M = 1024
+ISOVALUE = 0
+CSZ = 11
+DISPLAY = false
+
+Improvements:
+
+
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 53.67     20.89    20.89     1000    20.89    21.21  drawContours(short*)
+ 24.28     30.34     9.45     1000     9.45     9.45  makeContourGrid(short*, bool*)
+ 21.04     38.53     8.19     1000     8.19     8.19  applyThresh(bool*, float*, int)
+  0.18     38.60     0.07 29419647     0.00     0.00  cv::_InputArray::init(int, void const*)
+  0.15     38.66     0.06  9806549     0.00     0.00  cv::_InputArray::_InputArray()
+  0.10     38.70     0.04                             _init
+  0.08     38.73     0.03 19613098     0.00     0.00  cv::Point_<int>::Point_(int, int)
+  0.08     38.76     0.03  9806549     0.00     0.00  cv::Matx<double, 4, 1>::Matx()
+  0.05     38.78     0.02  9806549     0.00     0.00  cv::_InputOutputArray::_InputOutputArray(cv::Mat const&)
+  0.05     38.80     0.02  9806549     0.00     0.00  cv::Rect_<int>::Rect_(int, int, int, int)
+  0.05     38.82     0.02  9806549     0.00     0.00  cv::Size_<int>::Size_()
+  0.05     38.84     0.02  9806549     0.00     0.00  cv::Scalar_<double>::Scalar_(double)
+  0.05     38.86     0.02  9806549     0.00     0.00  cv::Mat::operator()(cv::Rect_<int> const&) const
+  0.04     38.88     0.01  9806549     0.00     0.00  cv::_InputOutputArray::~_InputOutputArray()
+  0.04     38.89     0.01  1048578     0.00     0.00  float const& std::max<float>(float const&, float const&)
+  0.03     38.90     0.01  9806549     0.00     0.00  cv::_InputArray::~_InputArray()
+  0.03     38.91     0.01  9806549     0.00     0.00  cv::_OutputArray::_OutputArray()
+  0.03     38.92     0.01  1048576     0.00     0.00  float const& std::min<float>(float const&, float const&)
+  0.00     38.92     0.00  9806549     0.00     0.00  cv::_OutputArray::~_OutputArray()
+  0.00     38.92     0.00  9806549     0.00     0.00  cv::Vec<double, 4>::Vec()
+  0.00     38.92     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00     38.92     0.00        1     0.00    25.00  readDem(float*)
+  0.00     38.92     0.00        1     0.00     0.00  cv::MatExpr::~MatExpr()
+  0.00     38.92     0.00        1     0.00     0.00  cv::MatExpr::operator cv::Mat() const
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2022 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 4 byte(s) for 0.03% of 38.92 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]     99.9    0.00   38.88                 main [1]
+               20.89    0.33    1000/1000        drawContours(short*) [2]
+                9.45    0.00    1000/1000        makeContourGrid(short*, bool*) [3]
+                8.19    0.00    1000/1000        applyThresh(bool*, float*, int) [4]
+                0.00    0.02       1/1           readDem(float*) [15]
+                0.00    0.00       2/1048578     float const& std::max<float>(float const&, float const&) [19]
+-----------------------------------------------
+               20.89    0.33    1000/1000        main [1]
+[2]     54.5   20.89    0.33    1000         drawContours(short*) [2]
+                0.02    0.16 9806549/9806549     cv::_InputOutputArray::_InputOutputArray(cv::Mat const&) [5]
+                0.02    0.03 9806549/9806549     cv::Scalar_<double>::Scalar_(double) [9]
+                0.03    0.00 19613098/19613098     cv::Point_<int>::Point_(int, int) [11]
+                0.01    0.01 9806549/9806549     cv::_InputOutputArray::~_InputOutputArray() [14]
+                0.02    0.00 9806549/9806549     cv::Rect_<int>::Rect_(int, int, int, int) [16]
+                0.02    0.00 9806549/9806549     cv::Mat::operator()(cv::Rect_<int> const&) const [18]
+-----------------------------------------------
+                9.45    0.00    1000/1000        main [1]
+[3]     24.3    9.45    0.00    1000         makeContourGrid(short*, bool*) [3]
+-----------------------------------------------
+                8.19    0.00    1000/1000        main [1]
+[4]     21.0    8.19    0.00    1000         applyThresh(bool*, float*, int) [4]
+-----------------------------------------------
+                0.02    0.16 9806549/9806549     drawContours(short*) [2]
+[5]      0.5    0.02    0.16 9806549         cv::_InputOutputArray::_InputOutputArray(cv::Mat const&) [5]
+                0.01    0.13 9806549/9806549     cv::_OutputArray::_OutputArray() [6]
+                0.02    0.00 9806549/29419647     cv::_InputArray::init(int, void const*) [8]
+-----------------------------------------------
+                0.01    0.13 9806549/9806549     cv::_InputOutputArray::_InputOutputArray(cv::Mat const&) [5]
+[6]      0.4    0.01    0.13 9806549         cv::_OutputArray::_OutputArray() [6]
+                0.06    0.04 9806549/9806549     cv::_InputArray::_InputArray() [7]
+                0.02    0.00 9806549/29419647     cv::_InputArray::init(int, void const*) [8]
+-----------------------------------------------
+                0.06    0.04 9806549/9806549     cv::_OutputArray::_OutputArray() [6]
+[7]      0.3    0.06    0.04 9806549         cv::_InputArray::_InputArray() [7]
+                0.02    0.00 9806549/29419647     cv::_InputArray::init(int, void const*) [8]
+                0.02    0.00 9806549/9806549     cv::Size_<int>::Size_() [17]
+-----------------------------------------------
+                0.02    0.00 9806549/29419647     cv::_InputArray::_InputArray() [7]
+                0.02    0.00 9806549/29419647     cv::_OutputArray::_OutputArray() [6]
+                0.02    0.00 9806549/29419647     cv::_InputOutputArray::_InputOutputArray(cv::Mat const&) [5]
+[8]      0.2    0.07    0.00 29419647         cv::_InputArray::init(int, void const*) [8]
+-----------------------------------------------
+                0.02    0.03 9806549/9806549     drawContours(short*) [2]
+[9]      0.1    0.02    0.03 9806549         cv::Scalar_<double>::Scalar_(double) [9]
+                0.00    0.03 9806549/9806549     cv::Vec<double, 4>::Vec() [12]
+-----------------------------------------------
+                                                 <spontaneous>
+[10]     0.1    0.04    0.00                 _init [10]
+-----------------------------------------------
+                0.03    0.00 19613098/19613098     drawContours(short*) [2]
+[11]     0.1    0.03    0.00 19613098         cv::Point_<int>::Point_(int, int) [11]
+-----------------------------------------------
+                0.00    0.03 9806549/9806549     cv::Scalar_<double>::Scalar_(double) [9]
+[12]     0.1    0.00    0.03 9806549         cv::Vec<double, 4>::Vec() [12]
+                0.03    0.00 9806549/9806549     cv::Matx<double, 4, 1>::Matx() [13]
+-----------------------------------------------
+                0.03    0.00 9806549/9806549     cv::Vec<double, 4>::Vec() [12]
+[13]     0.1    0.03    0.00 9806549         cv::Matx<double, 4, 1>::Matx() [13]
+-----------------------------------------------
+                0.01    0.01 9806549/9806549     drawContours(short*) [2]
+[14]     0.1    0.01    0.01 9806549         cv::_InputOutputArray::~_InputOutputArray() [14]
+                0.00    0.01 9806549/9806549     cv::_OutputArray::~_OutputArray() [21]
+-----------------------------------------------
+                0.00    0.02       1/1           main [1]
+[15]     0.1    0.00    0.02       1         readDem(float*) [15]
+                0.01    0.00 1048576/1048578     float const& std::max<float>(float const&, float const&) [19]
+                0.01    0.00 1048576/1048576     float const& std::min<float>(float const&, float const&) [22]
+-----------------------------------------------
+                0.02    0.00 9806549/9806549     drawContours(short*) [2]
+[16]     0.1    0.02    0.00 9806549         cv::Rect_<int>::Rect_(int, int, int, int) [16]
+-----------------------------------------------
+                0.02    0.00 9806549/9806549     cv::_InputArray::_InputArray() [7]
+[17]     0.1    0.02    0.00 9806549         cv::Size_<int>::Size_() [17]
+-----------------------------------------------
+                0.02    0.00 9806549/9806549     drawContours(short*) [2]
+[18]     0.1    0.02    0.00 9806549         cv::Mat::operator()(cv::Rect_<int> const&) const [18]
+-----------------------------------------------
+                0.00    0.00       2/1048578     main [1]
+                0.01    0.00 1048576/1048578     readDem(float*) [15]
+[19]     0.0    0.01    0.00 1048578         float const& std::max<float>(float const&, float const&) [19]
+-----------------------------------------------
+                0.01    0.00 9806549/9806549     cv::_OutputArray::~_OutputArray() [21]
+[20]     0.0    0.01    0.00 9806549         cv::_InputArray::~_InputArray() [20]
+-----------------------------------------------
+                0.00    0.01 9806549/9806549     cv::_InputOutputArray::~_InputOutputArray() [14]
+[21]     0.0    0.00    0.01 9806549         cv::_OutputArray::~_OutputArray() [21]
+                0.01    0.00 9806549/9806549     cv::_InputArray::~_InputArray() [20]
+-----------------------------------------------
+                0.01    0.00 1048576/1048576     readDem(float*) [15]
+[22]     0.0    0.01    0.00 1048576         float const& std::min<float>(float const&, float const&) [22]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I_FILENAME [32]
+[29]     0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [29]
+                0.00    0.00       1/1           cv::MatExpr::operator cv::Mat() const [31]
+                0.00    0.00       1/1           cv::MatExpr::~MatExpr() [30]
+-----------------------------------------------
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [29]
+[30]     0.0    0.00    0.00       1         cv::MatExpr::~MatExpr() [30]
+-----------------------------------------------
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [29]
+[31]     0.0    0.00    0.00       1         cv::MatExpr::operator cv::Mat() const [31]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2022 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+   [4] applyThresh(bool*, float*, int) [6] cv::_OutputArray::_OutputArray() [11] cv::Point_<int>::Point_(int, int)
+   [2] drawContours(short*)   [21] cv::_OutputArray::~_OutputArray() [30] cv::MatExpr::~MatExpr()
+   [3] makeContourGrid(short*, bool*) [5] cv::_InputOutputArray::_InputOutputArray(cv::Mat const&) [9] cv::Scalar_<double>::Scalar_(double)
+  [29] __static_initialization_and_destruction_0(int, int) [14] cv::_InputOutputArray::~_InputOutputArray() [18] cv::Mat::operator()(cv::Rect_<int> const&) const
+  [15] readDem(float*)        [12] cv::Vec<double, 4>::Vec() [31] cv::MatExpr::operator cv::Mat() const
+   [8] cv::_InputArray::init(int, void const*) [13] cv::Matx<double, 4, 1>::Matx() [19] float const& std::max<float>(float const&, float const&)
+   [7] cv::_InputArray::_InputArray() [16] cv::Rect_<int>::Rect_(int, int, int, int) [22] float const& std::min<float>(float const&, float const&)
+  [20] cv::_InputArray::~_InputArray() [17] cv::Size_<int>::Size_() [10] _init
