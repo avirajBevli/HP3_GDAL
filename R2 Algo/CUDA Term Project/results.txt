@@ -1,0 +1,4 @@
+Running time: GPU R2 with Raster Image 
+GPU R2 running time is 24.8062
+
+
